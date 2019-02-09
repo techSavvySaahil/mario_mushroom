@@ -1,0 +1,11 @@
+.box-wrap {
+  display: inline-block;
+}
+.box-wrap div {
+  padding:15px 30px;
+  text-align: center;
+}
+
+.highlight {
+  background-color: skyblue;
+}

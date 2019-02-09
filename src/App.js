@@ -2,24 +2,45 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Board from './components/Board';
+
 class App extends Component {
+  state = {
+    width: 0,
+    height: 0
+  }
+
+  askUserInp(param) {
+    return prompt(`What should be the ${param} of board ?`)
+  }
+  componentDidMount() {
+    alert(`We're building a maze game for you.`);
+    let width = 0;
+    let height = 0;
+
+    while(!width || isNaN(width)){
+      width = this.askUserInp('width');
+    }
+
+    while(!height || isNaN(height)){
+      height = this.askUserInp('height');
+    }
+    
+
+    this.setState({
+      width,
+      height
+    })
+
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
+        {this.state.width && this.state.height &&
+          <Board width={this.state.width} height={this.state.height} />
+        }
       </div>
     );
   }
