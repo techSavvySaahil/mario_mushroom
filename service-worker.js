@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mario_mushroom/precache-manifest.7aef3a1267ebd0604334eefc33a29bb3.js"
+  "/mario_mushroom/precache-manifest.e4a27b209c903769f796d8a20dc3d24a.js"
 );
 
 workbox.clientsClaim();

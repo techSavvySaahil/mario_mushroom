@@ -1,14 +1,14 @@
 {
-  "main.css": "/mario_mushroom/static/css/main.f4e2082b.chunk.css",
-  "main.js": "/mario_mushroom/static/js/main.d8c103bd.chunk.js",
-  "main.js.map": "/mario_mushroom/static/js/main.d8c103bd.chunk.js.map",
-  "static/js/1.1015926c.chunk.js": "/mario_mushroom/static/js/1.1015926c.chunk.js",
-  "static/js/1.1015926c.chunk.js.map": "/mario_mushroom/static/js/1.1015926c.chunk.js.map",
+  "main.css": "/mario_mushroom/static/css/main.5e60618a.chunk.css",
+  "main.js": "/mario_mushroom/static/js/main.7623bb0c.chunk.js",
+  "main.js.map": "/mario_mushroom/static/js/main.7623bb0c.chunk.js.map",
+  "static/js/1.bdd2f127.chunk.js": "/mario_mushroom/static/js/1.bdd2f127.chunk.js",
+  "static/js/1.bdd2f127.chunk.js.map": "/mario_mushroom/static/js/1.bdd2f127.chunk.js.map",
   "runtime~main.js": "/mario_mushroom/static/js/runtime~main.b5ab3cb0.js",
   "runtime~main.js.map": "/mario_mushroom/static/js/runtime~main.b5ab3cb0.js.map",
   "static/media/logo.svg": "/mario_mushroom/static/media/logo.5d5d9eef.svg",
-  "static/css/main.f4e2082b.chunk.css.map": "/mario_mushroom/static/css/main.f4e2082b.chunk.css.map",
+  "static/css/main.5e60618a.chunk.css.map": "/mario_mushroom/static/css/main.5e60618a.chunk.css.map",
   "index.html": "/mario_mushroom/index.html",
-  "precache-manifest.7aef3a1267ebd0604334eefc33a29bb3.js": "/mario_mushroom/precache-manifest.7aef3a1267ebd0604334eefc33a29bb3.js",
+  "precache-manifest.e4a27b209c903769f796d8a20dc3d24a.js": "/mario_mushroom/precache-manifest.e4a27b209c903769f796d8a20dc3d24a.js",
   "service-worker.js": "/mario_mushroom/service-worker.js"
 }
