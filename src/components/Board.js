@@ -13,50 +13,50 @@ class Board extends Component {
   }
   
   changeDirection = (newDir)=> {
-    let id = this.state.intervalId;
-    if(id) {
-      clearInterval(id);
-    }
-    this.setState({
-      direction: newDir
-    });
-    let newPos = this.state.currentHighlight;
-    let split = newPos.split(',');
-    let row = split[0];
-    let col = split[1];
-    let end = '';
-    switch(newDir) {
-      case 37: //left
-        end = `${row},0`;
-        break;
-      case 39: //right
-        end = `${row},${this.props.width}`;
-        break;
-      case 38: //up
-        end = `0,${col}`;
-        break;
-      case 40: //down
-        end = `${this.props.height},${col}`;
-        break;
-      default:
-        end = `${row},${this.props.width}`;
-    }
-
-    id = setInterval(()=>{
-      if(newPos != end){
-        newPos = this.moveMario(newPos, newDir);
-        console.log(this.state.stepsTaken);
-        this.setState((prevState)=>({stepsTaken: prevState.stepsTaken+1}));
-      }
-      else {
+    if(this.state.mushArr.length) {
+      let id = this.state.intervalId;
+      if(id) {
         clearInterval(id);
-        newDir = newDir>38 ? newDir-2 : newDir+2;
-        this.changeDirection(newDir);
       }
-    },1000);
-    this.setState({intervalId: id});
+      this.setState({
+        direction: newDir
+      });
+      let newPos = this.state.currentHighlight;
+      let split = newPos.split(',');
+      let row = split[0];
+      let col = split[1];
+      let end = '';
+      switch(newDir) {
+        case 37: //left
+          end = `${row},0`;
+          break;
+        case 39: //right
+          end = `${row},${this.props.width}`;
+          break;
+        case 38: //up
+          end = `0,${col}`;
+          break;
+        case 40: //down
+          end = `${this.props.height},${col}`;
+          break;
+        default:
+          end = `${row},${this.props.width}`;
+      }
 
-    
+      id = setInterval(()=>{
+        if(newPos != end){
+          newPos = this.moveMario(newPos, newDir);
+          console.log(this.state.stepsTaken);
+          this.setState((prevState)=>({stepsTaken: prevState.stepsTaken+1}));
+        }
+        else {
+          clearInterval(id);
+          newDir = newDir>38 ? newDir-2 : newDir+2;
+          this.changeDirection(newDir);
+        }
+      },1000);
+      this.setState({intervalId: id});
+    }
   }
   moveMario= (newPos, newDir)=> {
     let split = newPos.split(',');

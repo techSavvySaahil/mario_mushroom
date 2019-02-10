@@ -1,9 +1,13 @@
 .box-wrap {
   display: inline-block;
+  border:1px solid black;
 }
 .box-wrap div {
   padding:15px 30px;
   text-align: center;
+  width:72px;
+  height: 51px;
+  box-sizing: border-box;
 }
 
 .highlight {
